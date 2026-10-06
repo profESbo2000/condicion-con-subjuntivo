@@ -294,13 +294,13 @@
             border-left: 3px solid var(--accent-green);
         }
 
-        /* LECTURA */
+        /* LECTURA Y RESALTADO */
         .story-text {
             background: rgba(255,255,255,0.03);
             padding: 25px;
             border-radius: 10px;
             font-size: 1rem;
-            line-height: 1.85;
+            line-height: 1.9;
             margin-bottom: 25px;
             border-left: 4px solid var(--accent-pink);
         }
@@ -309,11 +309,35 @@
             margin-bottom: 15px;
         }
 
+        /* Estilo de Resaltado para Condicionales */
+        mark.cond-highlight {
+            background-color: #facc15;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(250, 204, 21, 0.4);
+        }
+
         .reading-questions {
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 20px;
+        }
+
+        .q-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .q-title {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 10px;
         }
 
         /* EXERCISES */
@@ -519,7 +543,7 @@
 
             <div class="connector-card-def">
                 <div class="connector-name">• Siempre que / Siempre y cuando</div>
-                <div class="connector-meaning">Significa: <em>"Todo estará bien o se cumplirá, mientas se mantenga esta condición."</em></div>
+                <div class="connector-meaning">Significa: <em>"Todo estará bien o se cumplirá, mientras se mantenga esta condición."</em></div>
                 <div class="connector-ex">✍️ <strong>Ejemplo:</strong> Podrás salir a jugar al parque <strong>siempre que termines</strong> toda la tarea primero.</div>
             </div>
 
@@ -559,7 +583,7 @@
             <div class="connector-card-def">
                 <div class="connector-name">• Como + Subjuntivo</div>
                 <div class="connector-meaning">Significa: <em>"¡Cuidado! Si haces (o no haces) esto, habrá una consecuencia negativa."</em></div>
-                <div class="connector-ex">✍️️ <strong>Ejemplo:</strong> ¡<strong>Como no ordenes</strong> tu habitación ahora mismo, no saldrás este fin de semana!</div>
+                <div class="connector-ex">✍️ <strong>Ejemplo:</strong> ¡<strong>Como no ordenes</strong> tu habitación ahora mismo, no saldrás este fin de semana!</div>
             </div>
 
             <div class="rule-note">
@@ -718,28 +742,67 @@
             <h2 class="section-title"><span>📖</span> Lectura: "El Dilema Tecnológico en la Educación"</h2>
             
             <div class="story-text">
-                <p>En el panorama educativo actual, la integración de la inteligencia artificial y las aulas virtuales plantea debates acalorados entre pedagogos y directivos. La transición hacia una formación completamente digital es viable, <strong>siempre que los centros docentes garanticen</strong> un acceso equitativo a la tecnología para todos los alumnos, independientemente de su estatus socioeconómico.</p>
-                <p>Muchos profesores sostienen que adoptar nuevas metodologías resulta enriquecedor <strong>con tal de que no se sacrifique</strong> el pensamiento crítico ni la interacción humana en el aula. Sin embargo, no son pocos los expertos que advierten sobre los riesgos: el fracaso escolar tecnológico será inevitable <strong>a menos que las instituciones inviertan</strong> de manera constante en la capacitación continua del profesorado.</p>
-                <p>Por otro lado, la directiva del Ministerio ha declarado que se mantendrán las becas de estudio <strong>a condición de que los estudiantes mantengan</strong> un rendimiento académico sobresaliente durante todo el curso lectivo. Además, se han diseñado protocolos estrictos para emergencias digitales: <strong>en el caso de que la plataforma principal sufra</strong> un ciberataque o una caída global de servidores, se activarán inmediatamente los repositorios impresos de contingencia.</p>
-                <p>El ministro concluyó la asamblea con un tono categórico: «<strong>Como los organismos regionales no administren</strong> los fondos públicos con absoluta transparencia, suspenderemos la financiación de los laboratorios digitales. Innovar es crucial, pero <strong>salvo que actuemos</strong> con máxima responsabilidad ética, corremos el riesgo de deshumanizar el aprendizaje».</p>
+                <p>En el panorama educativo actual, la integración de la inteligencia artificial y las aulas virtuales plantea debates acalorados entre pedagogos y directivos. La transición hacia una formación completamente digital es viable, <mark class="cond-highlight">siempre que los centros docentes garanticen</mark> un acceso equitativo a la tecnología para todos los alumnos, independientemente de su estatus socioeconómico.</p>
+                <p>Muchos profesores sostienen que adoptar nuevas metodologías resulta enriquecedor <mark class="cond-highlight">con tal de que no se sacrifique</mark> el pensamiento crítico ni la interacción humana en el aula. Sin embargo, el fracaso escolar tecnológico será inevitable <mark class="cond-highlight">a menos que las instituciones inviertan</mark> de manera constante en la capacitación continua del profesorado.</p>
+                <p>Por otro lado, la directiva ha declarado que se mantendrán las becas de estudio <mark class="cond-highlight">a condición de que los estudiantes mantengan</mark> un rendimiento académico sobresaliente. Además, <mark class="cond-highlight">en el caso de que la plataforma principal sufra</mark> un ciberataque o una caída global de servidores, se activarán inmediatamente los repositorios impresos de contingencia.</p>
+                <p>El ministro concluyó la asamblea con un aviso claro: «<mark class="cond-highlight">Como los organismos regionales no administren</mark> los fondos públicos con absoluta transparencia, suspenderemos la financiación de los laboratorios digitales. Innovar es crucial, pero <mark class="cond-highlight">salvo que actuemos</mark> con máxima responsabilidad ética, corremos el riesgo de deshumanizar el aprendizaje».</p>
             </div>
 
             <div class="reading-questions">
-                <h3 style="color: var(--accent-cyan); margin-bottom: 15px;">Preguntas de Comprensión Lectora:</h3>
+                <h3 style="color: var(--accent-cyan); margin-bottom: 20px;">Preguntas Sencillas de Comprensión Lectora:</h3>
                 
-                <div style="margin-bottom: 15px;">
-                    <p><strong>1. ¿Bajo qué requisito estricto se mantendrá la financiación estatal según la lectura?</strong></p>
-                    <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 5px;">Respuesta: </p>
+                <!-- Pregunta 1 -->
+                <div class="q-card">
+                    <p class="q-title">1. (Verdadero o Falso) ¿Los profesores están de acuerdo con usar tecnología en clase solo si no se pierde la interacción humana?</p>
+                    <div class="options-list">
+                        <button class="opt-btn" onclick="checkReadQ('rq1', true, 'rfb1')">Verdadero</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq1', false, 'rfb1')">Falso</button>
+                    </div>
+                    <div id="rfb1" class="feedback"></div>
                 </div>
 
-                <div style="margin-bottom: 15px;">
-                    <p><strong>2. ¿Qué excepción se contempla respecto a la deshumanización de la educación?</strong></p>
-                    <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 5px;">Respuesta:.</p>
+                <!-- Pregunta 2 -->
+                <div class="q-card">
+                    <p class="q-title">2. ¿Qué condición deben cumplir los estudiantes para mantener sus becas de estudio?</p>
+                    <div class="options-list">
+                        <button class="opt-btn" onclick="checkReadQ('rq2', false, 'rfb2')">a) Comprar una computadora nueva</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq2', true, 'rfb2')">b) Mantener un rendimiento académico sobresaliente</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq2', false, 'rfb2')">c) Asistir a clases todos los sábados</button>
+                    </div>
+                    <div id="rfb2" class="feedback"></div>
                 </div>
 
-                <div>
-                    <p><strong>3. Identifica en el texto las 5 estructuras condicionales utilizadas y el tiempo verbal que las acompaña.</strong></p>
+                <!-- Pregunta 3 -->
+                <div class="q-card">
+                    <p class="q-title">3. (Verdadero o Falso) Si la plataforma digital se cae o sufre un ciberataque, las clases se cancelarán por completo.</p>
+                    <div class="options-list">
+                        <button class="opt-btn" onclick="checkReadQ('rq3', false, 'rfb3')">Verdadero</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq3', true, 'rfb3')">Falso (Se usarán materiales impresos de contingencia)</button>
+                    </div>
+                    <div id="rfb3" class="feedback"></div>
                 </div>
+
+                <!-- Pregunta 4 -->
+                <div class="q-card">
+                    <p class="q-title">4. ¿Qué ocurrirá si los organismos regionales NO administran los fondos públicos con transparencia?</p>
+                    <div class="options-list">
+                        <button class="opt-btn" onclick="checkReadQ('rq4', true, 'rfb4')">a) Se suspenderá la financiación de los laboratorios digitales</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq4', false, 'rfb4')">b) Se cerrarán las escuelas inmediatamente</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq4', false, 'rfb4')">c) Se regalarán libros a todos los alumnos</button>
+                    </div>
+                    <div id="rfb4" class="feedback"></div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="q-card">
+                    <p class="q-title">5. (Verdadero o Falso) Según la lectura, las instituciones deben invertir en capacitar a los profesores para evitar el fracaso escolar tecnológico.</p>
+                    <div class="options-list">
+                        <button class="opt-btn" onclick="checkReadQ('rq5', true, 'rfb5')">Verdadero</button>
+                        <button class="opt-btn" onclick="checkReadQ('rq5', false, 'rfb5')">Falso</button>
+                    </div>
+                    <div id="rfb5" class="feedback"></div>
+                </div>
+
             </div>
         </section>
 
@@ -772,7 +835,7 @@
             <div class="exercise-card">
                 <span class="ex-title">3. Advertencia / Amenaza:</span>
                 <p>¡
-                    <input type="text" id="ex3" class="fill-in" placeholder="verbo 'volver'"> (tú) a perder las llaves de la casa y tendrás que pagar el cerrajero tú mismo!
+                    <input type="text" id="ex3" class="fill-in" placeholder="verbo 'volver'"> Como (tú) a perder las llaves de la casa y tendrás que pagar el cerrajero tú mismo!
                 </p>
                 <button class="btn-check" onclick="checkFillIn('ex3', 'Vuelvas', 'fb3')">Comprobar</button>
                 <div id="fb3" class="feedback"></div>
@@ -884,7 +947,7 @@
             <div class="topic-card">
                 <div id="topicTitle" class="topic-title">Tema 1: El Trabajo del Futuro y la Inteligencia Artificial</div>
                 <div id="topicPrompt" class="topic-prompt">«¿Estarías dispuesto a permitir que un robot sea tu jefe o tome decisiones sobre tu despido?»</div>
-                <span id="topicTarget" class="topic-target">⚠️ Estructura obligatoria: Responder usando "A condición de que" o "Siempre que"</span>
+                <span id="topicTarget" class="topic-target">⚠️️ Estructura obligatoria: Responder usando "A condición de que" o "Siempre que"</span>
                 <div>
                     <button class="btn-random" onclick="nextTopic()">🎲 Cambiar de Tema de Debate</button>
                 </div>
@@ -894,6 +957,18 @@
     </div>
 
     <script>
+        // LÓGICA PARA LAS PREGUNTAS DE LECTURA
+        function checkReadQ(qId, isCorrect, feedbackId) {
+            const feedback = document.getElementById(feedbackId);
+            if (isCorrect) {
+                feedback.className = "feedback correct";
+                feedback.innerHTML = "¡Correcto! Excelente comprensión del texto. 👏";
+            } else {
+                feedback.className = "feedback incorrect";
+                feedback.innerHTML = "Respuesta incorrecta. Revisa nuevamente el párrafo de la lectura.";
+            }
+        }
+
         // LÓGICA DE VERIFICACIÓN DE EJERCICIOS DE RELLENAR ESPACIOS
         function checkFillIn(inputId, correctAnswer, feedbackId, altAnswer = null) {
             const userInput = document.getElementById(inputId).value.trim().toLowerCase();
@@ -945,7 +1020,7 @@
             {
                 title: "Tema 1: Trabajo y Automatización",
                 prompt: "«¿Aceptarías que un robot dirija tu departamento o evalúe tu sueldo?»",
-                target: "⚠️️ Estructura obligatoria: Responde usando 'A condición de que' o 'Con tal de que'."
+                target: "⚠ Estructura obligatoria: Responde usando 'A condición de que' o 'Con tal de que'."
             },
             {
                 title: "Tema 2: Ecología y Estilo de Vida",
